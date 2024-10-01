@@ -23,8 +23,11 @@ int main() {
 		cout << "4. Get Average in stack" << endl;
 		cout << "q. Quit" << endl;
 		cout << "Enter Choice: ";
+		//get choice from user
 		cin >> choice;
+		//checks what choice and will run the chioce the user picked to run
 		switch (choice) {
+		//the add/push/insert function for the stack
 		case '1': {
 			int newInt;
 			cout << "Enter new integer to add: ";
@@ -32,16 +35,19 @@ int main() {
 			intStack.push(newInt);
 			break;
 		}
+		//remove/pop function for the stack
 		case '2': {
 			int remove = intStack.pop();
 			cout << remove << " was removed" << endl;
 			break;
 		}
+		//returns the top of the stack
 		case '3': {
 			int intTop = intStack.top();
 			cout << "Top of stack is: " << intTop << endl;
 			break;
 		}
+		//returns avg even when the avg is a 
 		case '4': {
 			float average = intStack.avg();
 			cout << "Stack Average is: " << average << endl;
